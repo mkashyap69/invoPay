@@ -15,7 +15,7 @@ const CheckoutMessage = ({ message, res, clientToken }) => {
       };
       const setPaymentDone = async () => {
         await axios.get(
-          `http://localhost:9000/api/v1/invoice/setPaymentDoneTrue?invoiceId=${invoiceId}`,
+          `https://invopay.herokuapp.com/api/v1/invoice/setPaymentDoneTrue?invoiceId=${invoiceId}`,
           config
         );
       };

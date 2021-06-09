@@ -7,7 +7,7 @@ export const login = (email, password) => async (dispatch, getState) => {
     });
 
     const { data } = await axios.post(
-      '/api/v1/auth/login',
+      'https://invopay.herokuapp.com/api/v1/auth/login',
       { email, password },
       { withCredentials: true }
     );
@@ -34,7 +34,7 @@ export const signup =
       });
 
       const { data } = await axios.post(
-        '/api/v1/auth/',
+        'https://invopay.herokuapp.com/api/v1/auth/',
         { email, password, name, phone },
         { withCredentials: true }
       );
@@ -62,7 +62,10 @@ export const getUserByCookie = () => async (dispatch, getState) => {
       withCredentials: true,
     };
 
-    const { data } = await axios.get('/api/v1/auth/user', config);
+    const { data } = await axios.get(
+      'https://invopay.herokuapp.com/api/v1/auth/user',
+      config
+    );
 
     dispatch({
       type: 'GET_USER_BY_COOKIE_SUCCESS',
@@ -77,4 +80,3 @@ export const getUserByCookie = () => async (dispatch, getState) => {
     });
   }
 };
-

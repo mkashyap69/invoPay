@@ -58,7 +58,7 @@ const InvoiceView = () => {
       invoiceData?.invoiceDate,
       total,
       invoiceData?.invoiceList,
-      `http://localhost:3000/checkout/${invoiceData?._id}`,
+      `https://invopay.netlify.app/checkout/${invoiceData?._id}`,
       'supportUrl'
     );
 
@@ -72,7 +72,7 @@ const InvoiceView = () => {
       },
     };
     const { data } = await axios.get(
-      `/api/v1/auth/clientToken?clientId=${clientId}`,
+      `https://invopay.herokuapp.com/api/v1/auth/clientToken?clientId=${clientId}`,
       config
     );
     await dispatch(sendInvoice(clickedClient, invoiceData, total, data.token));
@@ -85,7 +85,7 @@ const InvoiceView = () => {
     //   invoiceData?.invoiceDate,
     //   total,
     //   invoiceData?.invoiceList,
-    //   `http://localhost:3000/checkout/${invoiceData?._id}`,
+    //   `https://invopay.netlify.app/checkout/${invoiceData?._id}`,
     //   'supportUrl'
     // );
 

@@ -30,7 +30,7 @@ const Header = () => {
       },
       withCredentials: true,
     };
-    await axios.get('/api/v1/auth/logout', config);
+    await axios.get('https://invopay.herokuapp.com/api/v1/auth/logout', config);
     window.location.reload();
   };
 

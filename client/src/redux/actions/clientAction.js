@@ -13,7 +13,10 @@ export const getAllClients = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get('/api/v1/client/', config);
+    const { data } = await axios.get(
+      'https://invopay.herokuapp.com/api/v1/client/',
+      config
+    );
 
     dispatch({
       type: 'GET_ALL_CLIENTS_SUCCESS',
@@ -42,7 +45,10 @@ export const getClientById = (clientId) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/v1/client/${clientId}`, config);
+    const { data } = await axios.get(
+      `https://invopay.herokuapp.com/api/v1/client/${clientId}`,
+      config
+    );
 
     dispatch({
       type: 'GET_CLIENT_BY_ID_SUCCESS',
@@ -72,7 +78,7 @@ export const addClient = (name, email, phone) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.post(
-      '/api/v1/client/',
+      'https://invopay.herokuapp.com/api/v1/client/',
       { name, email, phone },
       config
     );
@@ -106,7 +112,7 @@ export const updateClient =
       };
 
       const { data } = await axios.put(
-        `/api/v1/client?clientId=${clientId}`,
+        `https://invopay.herokuapp.com/api/v1/client?clientId=${clientId}`,
         { name, email, phone },
         config
       );

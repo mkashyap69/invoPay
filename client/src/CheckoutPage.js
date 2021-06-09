@@ -33,7 +33,7 @@ export default function CheckoutPage() {
         duration: 5000,
       });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error]);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function CheckoutPage() {
       const stripe = await stripePromise;
 
       const { data } = await axios.post(
-        '/api/v1/payment/create-checkout-session',
+        'https://invopay.herokuapp.com/api/v1/payment/create-checkout-session',
         {
           invoiceId: invoice?._id,
           total: total,

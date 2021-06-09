@@ -22,7 +22,7 @@ const Homepage = () => {
           svg-animation
         </object>
         <div className="app-homepage-button">
-          <Button colorScheme="orange" onClick={onOpen}>
+          <Button colorScheme="orange" onClick={onOpen} isDisabled>
             Register
           </Button>
         </div>

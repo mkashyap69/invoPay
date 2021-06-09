@@ -54,7 +54,7 @@ const InvoiceHistoryPreview = () => {
       invoiceById?.invoiceDate,
       total,
       invoiceById?.invoiceList,
-      `http://localhost:3000/checkout/${invoiceById?._id}`,
+      `https://invopay.netlify.app/checkout/${invoiceById?._id}`,
       'supportUrl'
     );
 
@@ -68,10 +68,12 @@ const InvoiceHistoryPreview = () => {
       },
     };
     const { data } = await axios.get(
-      `/api/v1/auth/clientToken?clientId=${invoiceById?.client?._id}`,
+      `https://invopay.herokuapp.com/api/v1/auth/clientToken?clientId=${invoiceById?.client?._id}`,
       config
     );
-    await dispatch(sendInvoice(invoiceById?.client, invoiceById, total,data.token));
+    await dispatch(
+      sendInvoice(invoiceById?.client, invoiceById, total, data.token)
+    );
 
     toast({
       title: `Invoice send to the client`,

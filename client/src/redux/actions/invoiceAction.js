@@ -15,7 +15,7 @@ export const addInvoice =
       };
 
       const { data } = await axios.post(
-        `/api/v1/invoice?client=${clientId}`,
+        `https://invopay.herokuapp.com/api/v1/invoice?client=${clientId}`,
         { invoiceList },
         config
       );
@@ -49,7 +49,7 @@ export const sendInvoice =
       };
 
       await axios.post(
-        '/api/v1/invoice/sendInvoiceMail',
+        'https://invopay.herokuapp.com/api/v1/invoice/sendInvoiceMail',
         {
           seller: user?.data?.data.name,
           sellerEmail: user?.data?.data.email,
@@ -59,7 +59,7 @@ export const sendInvoice =
           invoiceDate: invoiceData?.invoiceDate,
           total: total,
           invoiceListArray: invoiceData?.invoiceList,
-          payUrl: `http://localhost:3000/checkout/${clientToken}/${invoiceData?._id}`,
+          payUrl: `https://invopay.netlify.app/checkout/${clientToken}/${invoiceData?._id}`,
         },
         config
       );
@@ -90,7 +90,10 @@ export const getAllInvoice = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/v1/invoice`, config);
+    const { data } = await axios.get(
+      `https://invopay.herokuapp.com/api/v1/invoice`,
+      config
+    );
 
     dispatch({
       type: 'GET_ALL_INVOICE_SUCCESS',
@@ -129,7 +132,7 @@ export const getInvoiceById =
         };
       }
       const { data } = await axios.get(
-        `http://localhost:9000/api/v1/invoice/invoiceById?invoiceId=${invoiceId}`,
+        `https://invopay.herokuapp.com/api/v1/invoice/invoiceById?invoiceId=${invoiceId}`,
         config
       );
 
@@ -160,7 +163,10 @@ export const getInvoiceByClient = (clientId) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/v1/invoice/${clientId}`, config);
+    const { data } = await axios.get(
+      `https://invopay.herokuapp.com/api/v1/invoice/${clientId}`,
+      config
+    );
 
     dispatch({
       type: 'GET_INVOICE_BY_CLIENT_SUCCESS',
