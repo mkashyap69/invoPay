@@ -1,0 +1,35 @@
+.app-checkoutMessage {
+  width: 100vw;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.app-checkoutMessage--success {
+  width: 40vw;
+  height: 40vw;
+  background-color: #f8faf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.checkmark {
+  color: #9abc66;
+  font-size: 6rem;
+}
+
+.checkmark-red {
+  color: red;
+  font-size: 6rem;
+}
+
+.app-checkoutMessage > p {
+  color: #88b04b;
+  font-family: 'Nunito Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+}

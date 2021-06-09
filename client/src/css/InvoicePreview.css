@@ -1,0 +1,23 @@
+.app-invoicePreview {
+  height: 83vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.app-invoicePreview--client {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5vh;
+}
+.app-invoicePreview--summary {
+  background: #f9f9f9;
+  height: max-content;
+  width: 95%;
+  margin: 0 2.5vw;
+}
+
+.app-invoicePreview--submit {
+  display: flex;
+  justify-content: space-around;
+}
+

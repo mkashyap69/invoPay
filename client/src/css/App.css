@@ -1,0 +1,24 @@
+html * {
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+
+
+.app-checkout {
+  width: 100vw;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border: 0.2px solid teal !important;
+  border-radius: 1rem !important;
+  padding: 1rem !important;
+}
+
+button {
+  border-radius: 1rem !important;
+}

@@ -1,0 +1,48 @@
+.app-invoiceView {
+  width: 100vw;
+  height: 83vh;
+  overflow-y: scroll;
+}
+
+.app-invoiceView--heading {
+  display: flex;
+  justify-content: center;
+}
+
+.app-invoiceView--sendTo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-invoiceView--sendTo--client {
+  width: 90%;
+  height: max-content;
+  background: teal !important;
+  border-radius: 0.8rem;
+  box-shadow: 2px 2px 2px gray;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.app-invoiceView--details--table {
+  display: flex;
+  justify-content: center;
+}
+
+.app-invoiceView--details--buttons{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-invoiceView--date{
+ display: flex;
+ width:80vw;
+ justify-content: space-between;
+ margin: 0 2.5rem;
+}

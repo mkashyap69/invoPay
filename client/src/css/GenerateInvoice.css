@@ -1,0 +1,51 @@
+.app-generateInvoice {
+  height: 83vh;
+  width: 100vw;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-generateInvoice--form {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-generateInvoice--formInput {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2vh;
+}
+
+.app-generateInvoice--formText {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.app-generateInvoice--submit {
+  display: flex;
+  justify-content: center;
+}
+
+.app-generateInvoice--total {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2vh 4vw;
+}
+
+.app-generateInvoice--client {
+  width: 90%;
+  height: max-content;
+  background: teal !important;
+  border-radius: 0.8rem;
+  box-shadow: 2px 2px 2px gray;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

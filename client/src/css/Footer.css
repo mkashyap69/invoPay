@@ -1,0 +1,19 @@
+.app-footer {
+  background:lightseagreen;
+  width: 100vw;
+  height: 7vh;
+  position: absolute;
+  top: 93vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  border-radius: 1rem;
+  position: absolute;
+  transform: translate(5.5%, -15%);
+}
+
+.app-footer--icon:active {
+  transform: scale(0.8);
+  transition: all ease 0.4s;
+}

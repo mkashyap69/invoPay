@@ -1,0 +1,12 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  padding: 0 1.5rem;
+}
+
+.app-header--logo {
+  height: 7vh;
+}

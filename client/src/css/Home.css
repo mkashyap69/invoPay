@@ -1,0 +1,38 @@
+.app-home {
+  height: 83vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.app-home--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh;
+}
+
+.css-13barj7 {
+  margin: 1.5vh;
+}
+
+.app-home--clientsTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh;
+  border-radius: 0.5rem;
+  background: #9eb7c6;
+  padding: 0.4rem;
+  z-index: 10;
+  box-shadow: 2px 2px 2px 1px #a0aebf;
+}
+
+.app-invoiceHistory--noClient {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 2px solid red;
+  margin: 0rem 2rem;
+  background: lightsalmon;
+  box-shadow: 2px 2px 2px gray;
+}

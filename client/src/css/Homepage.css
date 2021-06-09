@@ -1,0 +1,77 @@
+.app-homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 83vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+.app-homepage-button {
+  margin: 2rem;
+}
+
+.app-homepage-h1 {
+  animation: animateH1 7s infinite;
+}
+
+.app-homepage-h2 {
+  animation: animateH2 7s infinite;
+}
+
+.app-homepage-h3 {
+  animation: animateH3 7s infinite;
+}
+
+@keyframes animateH1 {
+  from {
+    color: white;
+  }
+  to {
+    background-image: linear-gradient(
+      to right,
+      #00a4e5,
+      #009ecf,
+      #0097b7,
+      #008f9f,
+      #108688
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes animateH2 {
+  from {
+    color: white;
+  }
+  to {
+    background-image: linear-gradient(
+      to right,
+      #902ebf,
+      #b11fb3,
+      #cc0ba5,
+      #e10096,
+      #f20886
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes animateH3 {
+  from {
+    color: white;
+  }
+  to {
+    background-image: linear-gradient(
+      to right,
+      #eb581a,
+      #f27f00,
+      #f1a400,
+      #eac800,
+      #dbeb12
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

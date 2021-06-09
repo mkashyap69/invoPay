@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .main {
+        width: 80vw;
+        height: 100vh;
+        overflow: scroll;
+        background: white;
+        z-index: 20;
+      }
+      .heading {
+        color: teal;
+      }
+
+      .app-invoicePreview--summary {
+        padding: 4vh;
+      }
+      .app-invoicePreview--client {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+      }
+
+      .upper {
+        margin: 2vh;
+        background: #fafafa;
+        padding: 2vh;
+        overflow: scroll;
+      }
+      .app-invoicePreview--submit {
+        display: flex;
+        justify-content: center;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .invoice-text {
+        margin: -2rem 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <p class="text-muted invoice-text">
+          <mark><strong>Invoice</strong></mark>
+        </p>
+        <h2 class="heading">InvoPay</h2>
+      </div>
+      <div class="upper">
+        <div class="app-invoicePreview--client">
+          <p class="text-muted">Client</p>
+          <p class="text-muted">${clientName}</p>
+        </div>
+        <div class="app-invoicePreview--client">
+          <p class="text-muted">Email</p>
+          <p class="text-muted">${clientEmail}</p>
+        </div>
+        <div class="app-invoicePreview--client">
+          <p class="text-muted">Phone No.</p>
+          <p class="text-muted">${clientPhone}</p>
+        </div>
+        <div class="app-invoicePreview--client">
+          <p class="text-muted">Invoice ID</p>
+          <p class="text-muted">${invoiceId}</p>
+        </div>
+      </div>
+      <div class="app-invoicePreview--summary">
+        <table
+          class="table table-light table-hover table-bordered table-striped"
+        >
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Rate</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            ${array.map(a=>(
+            <tr>
+              <td>{a.item}</td>
+              <td>{a.rate}</td>
+              <td></td>
+            </tr>
+            ))}
+            <tr>
+              <td></td>
+              <td>Total</td>
+              <td>${total}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="app-invoicePreview--submit">
+        <button type="button" class="btn btn-primary">
+          <a href="https://google.com/">Save as PDF</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
