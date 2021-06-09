@@ -75,10 +75,10 @@ if (cluster.isMaster) {
     cluster.fork();
   });
 } else {
-  app.use('/api/v1/auth', authRouter);
-  app.use('/api/v1/client', clientRouter);
-  app.use('/api/v1/invoice', invoiceRouter);
-  app.use('/api/v1/payment', payRouter);
+  app.use('https://invopay.herokuapp.com/api/v1/auth', authRouter);
+  app.use('https://invopay.herokuapp.com/api/v1/client', clientRouter);
+  app.use('https://invopay.herokuapp.com/api/v1/invoice', invoiceRouter);
+  app.use('https://invopay.herokuapp.com/api/v1/payment', payRouter);
 
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'));

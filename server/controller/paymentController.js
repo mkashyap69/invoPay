@@ -23,8 +23,8 @@ const createCheckoutSession = async (req, res, next) => {
           },
         ],
         mode: 'payment',
-        success_url: `http://localhost:3000/checkout/${clientToken}/${clientId}?success=true&id=${invoiceId}`,
-        cancel_url: `http://localhost:3000/checkout/${clientId}?canceled=true`,
+        success_url: `https://invopay.netlify.app/checkout/${clientToken}/${clientId}?success=true&id=${invoiceId}`,
+        cancel_url: `https://invopay.netlify.app/checkout/${clientId}?canceled=true`,
       });
 
       res.json({ id: session.id });
